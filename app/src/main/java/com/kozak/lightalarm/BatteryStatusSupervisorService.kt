@@ -4,7 +4,6 @@ import android.app.Service
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.IBinder
-import android.provider.Settings
 import com.kozak.lightalarm.Constants.MUSIC_NOTIFICATION_ID
 
 
@@ -13,7 +12,6 @@ class BatteryStatusSupervisorService : Service() {
     private val helper by lazy { NotificationHelper(this) }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        intent?.setAction(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
         AudioPlayer.setMediaPlayer(this)
         receiver = BatteryStatusChangeReceiver()
         val filter = IntentFilter()
