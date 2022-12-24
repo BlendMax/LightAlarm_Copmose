@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LightAlarm</string>
+    <string name="description">Connect the phone to the charger, if the light/power turns on again, the phone will start charging and play a melody to wake/notify you</string>
 </resources>
